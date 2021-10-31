@@ -9,4 +9,4 @@ Boring? No problem, just play with this boring pig game app and will add more bo
 3. If you get a dice of 1, it's other player's turn.
 4. The first one who hit the set winning score wins!
 
-#### [_App link here_](https://boring-piggame.netlify.app/)
+#### [App link here](https://boring-piggame.netlify.app/)
