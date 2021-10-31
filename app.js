@@ -25,7 +25,7 @@ const initGame = () => {
   playerCurrentScore2.textContent = 0;
   playerFinalScore1.textContent = 0;
   playerFinalScore2.textContent = 0;
-  setWinningScore.selectedIndex = 4;
+  setWinningScore.selectedIndex = 0;
   setWinningScore.removeAttribute('disabled');
   dice.classList.add('hidden');
   player1.classList.add('player-active');

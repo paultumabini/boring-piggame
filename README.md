@@ -6,6 +6,7 @@ Boring? No problem, just play with this boring pig game app and will add more bo
 
 1. Set winning score.
 2. You can simply keep the score by holding.
-3. The first one who hit the winning score wins!
+3. If you get a dice of 1, it's other player's turn.
+4. The first one who hit the set winning score wins!
 
-#### [App link here:](https://boring-piggame.netlify.app/)
+#### [_App link here_](https://boring-piggame.netlify.app/)
