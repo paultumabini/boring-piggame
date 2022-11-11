@@ -21,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  min-width: 550px;
+  min-height: 650px;
 }
 
 /* Layout */
@@ -206,6 +206,7 @@ main {
 
   .main {
     height: 100%;
+    width: 100%;
   }
 
   .player-flex {
@@ -222,6 +223,7 @@ main {
   .current {
     transform: translateY(-130%);
     padding: 1.5rem;
+    width: 200px;
   }
 
   .btn {
