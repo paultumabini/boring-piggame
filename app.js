@@ -11,7 +11,7 @@ const setWinningScore = document.querySelector('#win-score');
 const dice = document.querySelector('.dice');
 const rollDice = document.querySelector('.btn-roll');
 const holdDice = document.querySelector('.btn-hold');
-const resetGame = document.querySelector('.btn-new');
+const resetGame = document.querySelector('.btn-reset');
 
 //let isGameOver, scoreToWin, activePlayer, score, finalScore;
 let isGameOver = false;
@@ -49,19 +49,25 @@ setWinningScore.addEventListener('change', function () {
 const switchPlayer = () => {
   if (!isGameOver) {
     //reset current score to 0
-    document.querySelector(`#player-current-score-${activePlayer}`).textContent = 0;
+    document.querySelector(
+      `#player-current-score-${activePlayer}`
+    ).textContent = 0;
     //toggle background color
     player1.classList.toggle('player-active');
     player2.classList.toggle('player-active');
 
     //add score to final score
-    finalScore = parseInt(document.querySelector(`#player-final-score-${activePlayer}`).textContent);
+    finalScore = parseInt(
+      document.querySelector(`#player-final-score-${activePlayer}`).textContent
+    );
 
-    document.querySelector(`#player-final-score-${activePlayer}`).textContent = finalScore + score;
+    document.querySelector(`#player-final-score-${activePlayer}`).textContent =
+      finalScore + score;
 
     updateFinalScore();
 
-    activePlayer = activePlayer === 1 ? 2 : activePlayer === 2 ? 1 : activePlayer;
+    activePlayer =
+      activePlayer === 1 ? 2 : activePlayer === 2 ? 1 : activePlayer;
     score = 0;
   }
 };
@@ -70,10 +76,17 @@ const updateFinalScore = () => {
   if (finalScore + score >= scoreToWin) {
     isGameOver = true;
     dice.classList.add('hidden');
-    document.querySelector(`#player-final-score-${activePlayer}`).textContent = finalScore + score;
-    document.querySelector(`#player-current-score-${activePlayer}`).textContent = 0;
-    document.querySelector(`.player-${activePlayer}`).classList.add('player-winner');
-    document.querySelector(`#player-final-score-${activePlayer}`).insertAdjacentHTML('afterend', '<p class ="winner">⭐You Win! ✨</p>');
+    document.querySelector(`#player-final-score-${activePlayer}`).textContent =
+      finalScore + score;
+    document.querySelector(
+      `#player-current-score-${activePlayer}`
+    ).textContent = 0;
+    document
+      .querySelector(`.player-${activePlayer}`)
+      .classList.add('player-winner');
+    document
+      .querySelector(`#player-final-score-${activePlayer}`)
+      .insertAdjacentHTML('afterend', '<p class ="winner">⭐You Win! ✨</p>');
   }
 };
 
@@ -86,9 +99,14 @@ rollDice.addEventListener('click', function () {
 
     if (activeScore !== 1) {
       score += activeScore;
-      document.querySelector(`#player-current-score-${activePlayer}`).textContent = score;
+      document.querySelector(
+        `#player-current-score-${activePlayer}`
+      ).textContent = score;
 
-      finalScore = parseInt(document.querySelector(`#player-final-score-${activePlayer}`).textContent);
+      finalScore = parseInt(
+        document.querySelector(`#player-final-score-${activePlayer}`)
+          .textContent
+      );
       updateFinalScore();
     } else {
       switchPlayer();

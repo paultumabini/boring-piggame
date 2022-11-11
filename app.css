@@ -20,13 +20,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  min-width: 550px;
 }
 
 /* Layout */
 main {
   position: relative;
   width: 100rem;
-  height: 75rem;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -41,9 +43,10 @@ main {
   top: 15.5rem;
   left: 50%;
   transform: translate(-50%);
-  color: #fff;
-  text-align: center;
   font-size: 1.5rem;
+  color: rgb(29 130 42);
+  font-weight: 700;
+  text-align: center;
 }
 
 #win-score {
@@ -102,7 +105,7 @@ main {
   opacity: 0.8;
   border-radius: 9px;
   color: #ffffff;
-  width: 65%;
+  width: 250px;
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
@@ -131,8 +134,7 @@ main {
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
-  transition: all 0.2s;
-
+  transition: all ease-in-out 0.5s;
   background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
@@ -147,16 +149,16 @@ main {
   margin-right: 0.7rem;
 }
 
-.btn-new {
+.btn-reset {
   top: 8rem;
 }
 
 .btn-roll {
-  top: 50rem;
+  top: 65%;
 }
 
 .btn-hold {
-  top: 60rem;
+  top: 80%;
 }
 
 .btn:active {
@@ -195,4 +197,51 @@ main {
 }
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .main-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .main {
+    height: 100%;
+  }
+
+  .player-flex {
+    width: 100%;
+    height: 85%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .player {
+    padding: 20rem 0 0;
+  }
+
+  .current {
+    transform: translateY(-130%);
+    padding: 1.5rem;
+  }
+
+  .btn {
+    width: 200px;
+    height: 50px;
+  }
+
+  .btn-roll {
+    bottom: 100px;
+    left: 25%;
+    top: 85%;
+  }
+
+  .btn-hold {
+    bottom: 20px;
+    left: 75%;
+    top: 85%;
+  }
+
+  .btn-reset {
+    top: 8%;
+  }
 }
